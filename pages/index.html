@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>index</title>
+  </head>
+  <body>
+    <main class="mainIndex">
+      <section class="newPackage">
+        <div class="container">
+          <div class="mainCard">
+            <aside class="imgBox">
+              <img src="../assets/images/traveling.png" alt="traveling" class="img">
+              <img src="../assets/images/travelWords.png" alt="travelWords" class="img">
+            </aside>
+            <div class="inputsBox">
+              <div class="inputBox">
+                <div class="inputTitle">
+                  <div class="title">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M13 7H11V11H7V13H11V17H13V13H17V11H13V7ZM12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z" fill="#00807E"/>
+                    </svg>
+                    <h1 class="h4">新增旅遊套票</h1>
+                  </div>
+                  <div class="line"></div>
+                </div>
+                <div class="inputGroup">
+                  <div class="input-primary">
+                    <label for="packageName" class="label label-sm">套票名稱</label>
+                    <input type="text" id="packageName" class="input para-md" placeholder="請填寫圖片名稱">
+                  </div>
+                  <div class="input-primary">
+                    <label for="packageWebsite" class="label label-sm">圖片網址</label>
+                    <input type="url" id="packageWebsite" class="input para-md" placeholder="請填寫圖片網址">
+                  </div>
+                  <div class="select-primary">
+                    <label for="packagePlace" class="label label-sm">景點地區</label>
+                    <select id="packagePlace" class="select packagePlace para-md">
+                      <option value="" disabled selected>請選擇景點地區</option>
+                      <option value="基隆">基隆</option>
+                      <option value="台北">臺北</option>
+                      <option value="新北">新北</option>
+                      <option value="桃園">桃園</option>
+                      <option value="新竹">新竹</option>
+                      <option value="苗栗">苗栗</option>
+                      <option value="台中">臺中</option>
+                      <option value="彰化">彰化</option>
+                      <option value="南投">南投</option>
+                      <option value="雲林">雲林</option>
+                      <option value="嘉義">嘉義</option>
+                      <option value="台南">臺南</option>
+                      <option value="高雄">高雄</option>
+                      <option value="屏東">屏東</option>
+                      <option value="台東">臺東</option>
+                      <option value="花蓮">花蓮</option>
+                      <option value="澎湖">澎湖</option>
+                      <option value="金門">金門</option>
+                      <option value="連江">連江 (馬祖)</option>
+                    </select>
+                    <div class="click">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.00024 13.0569H15.0002L11.8616 17.0569L9.00024 13.0569Z" fill="#00807E"/>
+                        <path d="M15 10H9L12.1386 6L15 10Z" fill="#00807E"/>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="input-primary">
+                    <label for="packagePrice" class="label label-sm">套票金額</label>
+                    <input type="number" id="packagePrice" class="input para-md" placeholder="請填寫套票金額">
+                  </div>
+                  <div class="input-primary">
+                    <label for="packageNum" class="label label-sm">套票組數</label>
+                    <input type="number" id="packageNum" class="input para-md" placeholder="請填寫套票組數">
+                  </div>
+                  <div class="input-primary">
+                    <label for="packageStar" class="label label-sm">套票星級</label>
+                    <input type="number" id="packageStar" class="input para-md" placeholder="請填寫套票星級">
+                  </div>
+                  <div class="textarea-primary">
+                    <label for="packageDesc" class="label label-sm">套票描述</label>
+                    <textarea id="packageDesc" class="textarea para-md" placeholder="請填寫套票描述 (限 100 字)"></textarea>
+                  </div>
+                </div>
+                <button class="button-primary">新增套票</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="relatedActivities">
+        <div class="container">
+          <div class="select-filter">
+            <select id="filterPlace" class="select filterPlace para-md">
+              <option value="" disabled selected>地區搜尋</option>
+              <option value="基隆">基隆</option>
+              <option value="台北">臺北</option>
+              <option value="新北">新北</option>
+              <option value="桃園">桃園</option>
+              <option value="新竹">新竹</option>
+              <option value="苗栗">苗栗</option>
+              <option value="台中">臺中</option>
+              <option value="彰化">彰化</option>
+              <option value="南投">南投</option>
+              <option value="雲林">雲林</option>
+              <option value="嘉義">嘉義</option>
+              <option value="台南">臺南</option>
+              <option value="高雄">高雄</option>
+              <option value="屏東">屏東</option>
+              <option value="台東">臺東</option>
+              <option value="花蓮">花蓮</option>
+              <option value="澎湖">澎湖</option>
+              <option value="金門">金門</option>
+              <option value="連江">連江 (馬祖)</option>
+            </select>
+            <div class="click">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.00024 13.0569H15.0002L11.8616 17.0569L9.00024 13.0569Z" fill="#00807E"/>
+                <path d="M15 10H9L12.1386 6L15 10Z" fill="#00807E"/>
+              </svg>
+            </div>
+            <p class="para-md">本次搜尋共 6 筆資料</p>
+          </div>
+          <ul class="cards-wrapper">
+            <li class="cards">
+              <a href="#" class="card">
+                <div class="card-img">
+                  <img src="../assets/images/swim.png" alt="swim" class="img">
+                </div>
+                <div class="card-contents">
+                  <div class="contents-top">
+                    <h2 class="title label-lg">綠島自由行套裝行程</h2>
+                    <p class="para para-md">嚴選超高CP值綠島自由行套裝行程，多種綠島套裝組合，提供台東綠島來回船票、綠島環島機車、綠島民宿住宿，行程加贈『綠島浮潛體驗』以及『綠島生態導覽』，讓你用輕鬆的綠島套裝自由行，也能深度認識綠島在地文化。</p>
+                  </div>
+                  <div class="contents-bottom">
+                    <div class="remain">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V15H13V17ZM13 13H11V7H13V13Z" fill="#00807E"/>
+                      </svg>
+                      <p class="label-sm">剩下最後 8 組</p>
+                    </div>
+                    <div class="prices">
+                      <p class="currency label-sm">TWD</p>
+                      <p class="price label-xl">$1,280</p>
+                    </div>
+                  </div>
+                  <div class="stars-tag">
+                    <span class="para-md">8.6</span>
+                  </div>
+                </div>
+              </a>
+              <div class="place-tag">
+                <span class="label-md">臺東</span>
+              </div>
+            </li>
+            <li class="cards">
+              <a href="#" class="card">
+                <div class="card-img">
+                  <img src="../assets/images/climbMountains.png" alt="climbMountains" class="img">
+                </div>
+                <div class="card-contents">
+                  <div class="contents-top">
+                    <h2 class="title label-lg">清境高空觀景步道二日遊</h2>
+                    <p class="para para-md">清境農場青青草原數十公頃碧草，餵食著數以百計的綿羊和牛群，中央山脈最高的北三段群峰形成一堵如帶的高牆，攔住清晨的薄霧山嵐，成就了從花蓮翻山而來的雲瀑在濁水溪谷積成雲海，這些景觀豐沛了清境觀景步道的風格，也涵養它無可取代的特色。</p>
+                  </div>
+                  <div class="contents-bottom">
+                    <div class="remain">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V15H13V17ZM13 13H11V7H13V13Z" fill="#00807E"/>
+                      </svg>
+                      <p class="label-sm">剩下最後 12 組</p>
+                    </div>
+                    <div class="prices">
+                      <p class="currency label-sm">TWD</p>
+                      <p class="price label-xl">$2,580</p>
+                    </div>
+                  </div>
+                  <div class="stars-tag">
+                    <span class="para-md">8.2</span>
+                  </div>
+                </div>
+              </a>
+              <div class="place-tag">
+                <span class="label-md">南投</span>
+              </div>
+            </li>
+            <li class="cards">
+              <a href="#" class="card">
+                <div class="card-img">
+                  <img src="../assets/images/camping.png" alt="camping" class="img">
+                </div>
+                <div class="card-contents">
+                  <div class="contents-top">
+                    <h2 class="title label-lg">南庄度假村露營車二日遊</h2>
+                    <p class="para para-md">南庄雲水豪華露營車，擁有最愜意的露營體驗吧！<br>一泊一食，輕鬆享受露營車樂趣。獨立衛浴與私人戶外露臺。入住豪華露營車還能使用戶外SPA大眾湯，感受美人湯魅力。</p>
+                  </div>
+                  <div class="contents-bottom">
+                    <div class="remain">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V15H13V17ZM13 13H11V7H13V13Z" fill="#00807E"/>
+                      </svg>
+                      <p class="label-sm">剩下最後 2 組</p>
+                    </div>
+                    <div class="prices">
+                      <p class="currency label-sm">TWD</p>
+                      <p class="price label-xl">$1,280</p>
+                    </div>
+                  </div>
+                  <div class="stars-tag">
+                    <span class="para-md">9.6</span>
+                  </div>
+                </div>
+              </a>
+              <div class="place-tag">
+                <span class="label-md">臺中</span>
+              </div>
+            </li>
+            <li class="cards">
+              <a href="#" class="card">
+                <div class="card-img">
+                  <img src="../assets/images/waterfall.png" alt="waterfall" class="img">
+                </div>
+                <div class="card-contents">
+                  <div class="contents-top">
+                    <h2 class="title label-lg">山林悠遊雙人套票</h2>
+                    <p class="para para-md">山林悠遊套票，結合南投清境高空步道、雙龍瀑布七彩吊橋、瑞龍瀑布園區之熱門景點，帶您飽覽南投瑰麗的自然環境，體驗變化無窮的地形景觀，喜歡挑戰高空的您一定不可錯過。<br>（含雙龍瀑布入場券 x2）</p>
+                  </div>
+                  <div class="contents-bottom">
+                    <div class="remain">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V15H13V17ZM13 13H11V7H13V13Z" fill="#00807E"/>
+                      </svg>
+                      <p class="label-sm">剩下最後 10 組</p>
+                    </div>
+                    <div class="prices">
+                      <p class="currency label-sm">TWD</p>
+                      <p class="price label-xl">$880</p>
+                    </div>
+                  </div>
+                  <div class="stars-tag">
+                    <span class="para-md">8.6</span>
+                  </div>
+                </div>
+              </a>
+              <div class="place-tag">
+                <span class="label-md">臺中</span>
+              </div>
+            </li>
+            <li class="cards">
+              <a href="#" class="card">
+                <div class="card-img">
+                  <img src="../assets/images/fishing.png" alt="fishing" class="img">
+                </div>
+                <div class="card-contents">
+                  <div class="contents-top">
+                    <h2 class="title label-lg">漁樂碼頭釣魚體驗套票</h2>
+                    <p class="para para-md">台中全新親子景點寶熊漁樂碼頭，為知名釣具公司「OKUMA」所創立的觀光工廠。一樓藍白希臘漁村風商店街免費參觀。二樓釣魚故事館則設立全台唯一虛擬釣場，透過導覽讓你知道如何釣魚、魚餌怎麼區分，寓教於樂的台中景點！</p>
+                  </div>
+                  <div class="contents-bottom">
+                    <div class="remain">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V15H13V17ZM13 13H11V7H13V13Z" fill="#00807E"/>
+                      </svg>
+                      <p class="label-sm">剩下最後 5 組</p>
+                    </div>
+                    <div class="prices">
+                      <p class="currency label-sm">TWD</p>
+                      <p class="price label-xl">$1,280</p>
+                    </div>
+                  </div>
+                  <div class="stars-tag">
+                    <span class="para-md">8.6</span>
+                  </div>
+                </div>
+              </a>
+              <div class="place-tag">
+                <span class="label-md">臺中</span>
+              </div>
+            </li>
+            <li class="cards">
+              <a href="#" class="card">
+                <div class="card-img">
+                  <img src="../assets/images/swinging.png" alt="swinging" class="img">
+                </div>
+                <div class="card-contents">
+                  <div class="contents-top">
+                    <h2 class="title label-lg">熊森公園親子二日遊套票</h2>
+                    <p class="para para-md">來自日本最受歡迎的兒童遊樂園《 BearSon Park 熊森公園》於全世界有800多家據點，在全世界、日本及台灣，很多小孩的童年都在遊戲愛樂園裡一同成長，提供兒童一個最富教育性及娛樂性的休憩遊樂天地！</p>
+                  </div>
+                  <div class="contents-bottom">
+                    <div class="remain">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V15H13V17ZM13 13H11V7H13V13Z" fill="#00807E"/>
+                      </svg>
+                      <p class="label-sm">剩下最後 3 組</p>
+                    </div>
+                    <div class="prices">
+                      <p class="currency label-sm">TWD</p>
+                      <p class="price label-xl">$2,480</p>
+                    </div>
+                  </div>
+                  <div class="stars-tag">
+                    <span class="para-md">8.6</span>
+                  </div>
+                </div>
+              </a>
+              <div class="place-tag">
+                <span class="label-md">高雄</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>

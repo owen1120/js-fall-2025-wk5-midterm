@@ -1,0 +1,83 @@
+.cards{
+    .card{
+        width: 100%;
+        position: relative;
+        border: 1px solid $color-neutral-200;
+        border-top-right-radius: .25rem;
+        border-bottom-right-radius: .25rem;
+        border-bottom-left-radius: .25rem;
+        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.15);
+        overflow: hidden;
+        .card-img{
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            img{
+                width: 100%;
+            }
+        }
+        .card-contents{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: $spacing-6;
+            padding: $spacing-6 $spacing-5;
+            .contents-top{
+                display: flex;
+                flex-direction: column;
+                gap: $spacing-4;
+                .title{
+                    width: 100%;
+                    border-bottom: 2px solid $color-primary-400;
+                }
+                .para{
+                    height: 9rem;
+                    color: $color-neutral-600;
+                }
+            }
+            .contents-bottom{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .remain{
+                    display: flex;
+                    align-items: center;
+                    gap: $spacing-1;
+                }
+                .prices{
+                    display: flex;
+                    align-items: center;
+                    gap: $spacing-1;
+                }
+            }
+            .stars-tag{
+                min-width: 40px;
+                min-height: 32px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                transform: translateY(-50%);
+                color: $color-neutral-0;
+                background-color: $color-primary-400;
+                border-top-right-radius: .25rem;
+                border-bottom-right-radius: .25rem;
+                padding: $spacing-1 $spacing-2;
+            }
+        }
+    }
+    .place-tag{
+        min-width: 80px;
+        min-height: 44px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: $color-neutral-0;
+        text-align: center;
+        background-color: $color-primary-300;
+        border-top-right-radius: .25rem;
+        border-bottom-right-radius: .25rem;
+        padding: $spacing-1 $spacing-2;
+    }
+}

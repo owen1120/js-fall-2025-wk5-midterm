@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+    position: relative;
+}
+
+body{
+    font-family: $font-family;
+    color: $color-primary-400;
+    font-size: var(--para-md);
+}
+
+a{
+    display: block;
+    color: $color-primary-400;
+    text-decoration: none;
+}
+
+img{
+    display: block;
+}
+
+.container{
+    max-width: 1320px;
+    padding: 0 12px;
+    margin: 0 auto;
+}
+.container-fluid{
+    width: 100%;
+    padding: 0 12px;
+    margin: 0 auto;
+}

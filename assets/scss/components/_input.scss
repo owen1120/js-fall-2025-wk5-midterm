@@ -1,0 +1,101 @@
+.input-primary{
+    display: flex;
+    align-items: center;
+    gap: $spacing-6;
+    .label{
+        color: $color-primary-400;
+    }
+    .input{
+        flex-grow: 1;
+        background-color: $color-bg-light;
+        border-top-left-radius: .25rem;
+        border-top-right-radius: .25rem;
+        border: none;
+        border-bottom: 1px solid $color-primary-400;
+        padding: $spacing-2 $spacing-3;
+    }
+}
+
+.select-primary{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: $spacing-6;
+    .label{
+        color: $color-primary-400;
+    }
+    .select{
+        position: relative;
+        flex-grow: 1;
+        color: $color-neutral-600;
+        background-color: $color-bg-light;
+        border-top-left-radius: .25rem;
+        border-top-right-radius: .25rem;
+        border: none;
+        border-bottom: 1px solid $color-primary-400;
+        padding: $spacing-2 $spacing-3;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        &::-ms-expand {
+            display: none;
+        }
+    }
+    .click{
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        padding-right: $spacing-3;
+    }
+}
+
+.select-filter{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: $spacing-6;
+    .filterPlace{
+        width: 306px;
+        color: $color-neutral-500;
+        background-color: $color-neutral-0;
+        border-radius: .25rem;
+        border: 1px solid $color-neutral-400;
+        padding: $spacing-2 $spacing-3;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        &::-ms-expand {
+            display: none;
+        }
+    }
+    .click{
+        position: absolute;
+        top: 50%;
+        left: 270px;
+        transform: translateY(-50%);
+    }
+    .para-md{
+        color: $color-neutral-500;
+    }
+}
+
+.textarea-primary{
+    display: flex;
+    align-items: start;
+    gap: $spacing-6;
+    .label{
+        color: $color-primary-400;
+    }
+    .textarea{
+        flex-grow: 1;
+        height: 120px;
+        background-color: $color-bg-light;
+        border-top-left-radius: .25rem;
+        border-top-right-radius: .25rem;
+        border: none;
+        border-bottom: 1px solid $color-primary-400;
+        padding: $spacing-2 $spacing-3;
+        resize: vertical;
+    }
+}
