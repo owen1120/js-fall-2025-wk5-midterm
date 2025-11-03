@@ -1,6 +1,12 @@
-const filterItems = document.querySelector('#filterPlace');
-// console.log(filterItems);
+function filterSubmission(){
+    const filterElement = document.getElementById('filterPlace');
+    const filterValue = filterElement.value;
 
-if (filterItems) {
     
+    filterElement.addEventListener('change', (event) => {
+        console.log(filterElement.value);
+        
+    })
 }
+
+filterSubmission();
