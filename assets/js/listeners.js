@@ -1,6 +1,5 @@
-import { addPackage, getAllPackages, getFilteredPackages } from "./state.js";
+import { addPackage, getFilteredPackages, transformFormData } from "./state.js";
 import { renderCards } from "./render.js";
-import { name, render } from "ejs";
 
 function formListener() {
     const form = document.getElementById('addPackageForm');
@@ -16,24 +15,13 @@ function formListener() {
         const formData = new FormData(form);
         const packageData = Object.fromEntries(formData.entries());
 
-        packageData.price = parseFloat(packageData.price) || 0;
-        packageData.number = parseInt(packageData.number) || 0;
-        packageData.stars = parseFloat(packageData.stars) || 0;
+        const newPackageData = transformFormData(packageData);
 
-        const newpackage = {
-            name: packageData.packageName,
-            place: packageData.packagePlace,
-            price: packageData.packagePrice,
-            number: packageData.packageNum,
-            stars: packageData.packageStar,
-            description: packageData.packageDescription,
-            image: packageData.packageImage,
-            linkUrl: "#"
-        };
-        addPackage(newpackage);
+        addPackage(newPackageData);
 
-        renderCards(getFilteredPackages(document.getElementById('filterPlace').value));
-        
+        const currentFilter = document.getElementById('filterPlace').value;
+        renderCards(getFilteredPackages(currentFilter));
+
         form.reset();
     });
 }

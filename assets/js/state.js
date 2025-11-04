@@ -2,7 +2,6 @@ const packageDataList = [
     {
         id: 1,
         name: '綠島自由行套裝行程',
-        linkUrl: '#',
         image: '../assets/images/swim.png',
         place: '台東',
         price: 1280,
@@ -13,7 +12,6 @@ const packageDataList = [
     {
         id: 2,
         name: '清境高空觀景步道二日遊',
-        linkUrl: '#',
         image: '../assets/images/climbMountains.png',
         place: '南投',
         price: 2580,
@@ -24,7 +22,6 @@ const packageDataList = [
     {
         id: 3,
         name: '南庄度假村露營車二日遊',
-        linkUrl: '#',
         image: '../assets/images/camping.png',
         place: '台中', 
         price: 1280,
@@ -35,7 +32,6 @@ const packageDataList = [
     {
         id: 4,
         name: '山林悠遊雙人套票',
-        linkUrl: '#',
         image: '../assets/images/waterfall.png',
         place: '台中',
         price: 880,
@@ -46,7 +42,6 @@ const packageDataList = [
     {
         id: 5,
         name: '漁樂碼頭釣魚體驗套票',
-        linkUrl: '#',
         image: '../assets/images/fishing.png',
         place: '台中',
         price: 1280,
@@ -57,7 +52,6 @@ const packageDataList = [
     {
         id: 6,
         name: '熊森公園親子二日遊套票',
-        linkUrl: '#',
         image: '../assets/images/swinging.png',
         place: '高雄',
         price: 2480,
@@ -67,22 +61,77 @@ const packageDataList = [
     },
 ];
 
+let allPackages = [];
+
+function transformApiData(apiItem) {
+    return {
+        id: apiItem.id,
+        name: apiItem.name,
+        image: apiItem.imgUrl,
+        place: apiItem.area,
+        price: apiItem.price,
+        number: apiItem.group,
+        stars: apiItem.rate,
+        description: apiItem.description,
+    };
+}
+
+export function transformFormData(data) {
+    return {
+        name: data.packageName,
+        image: data.packageWebsite,
+        place: data.packagePlace,
+        price: parseFloat(data.packagePrice) || 0,
+        number: parseInt(data.packageNum) || 0,
+        stars: parseFloat(data.packageStar) || 0,
+        description: data.packageDesc,
+    };
+}
+
+export async function fetchRemotePackage() {
+    const apiUrl = 'https://raw.githubusercontent.com/hexschool/js-training/main/travelApi.json';
+
+    try {
+        const response = await axios.get(apiUrl);   
+        if (response.data && Array.isArray(response.data.data)) {
+            const remoteData = response.data.data.map(transformApiData);
+            allPackages = [...packageDataList, ...remoteData];
+
+            console.log('Remote package data fetched and merged successfully.');
+        } else {
+            allPackages = [...packageDataList];
+        }
+    } catch (error) {
+        console.error('Error fetching remote package data:', error);
+
+        allPackages = [...packageDataList];
+    }
+}
+
 export function getAllPackages() {
-    return packageDataList;
+    return allPackages;
 }
 
 export function getFilteredPackages(place) {
-    if (place === "") {
-        return packageDataList;
+    if (place === "" || place === "地區搜尋") {
+        return allPackages;
     }
 
-    return packageDataList.filter(item => item.place === place);
+    return allPackages.filter(item => item.place === place);
 }
 
 export function addPackage(newPackageData) {
-    const newId = Math.max(...packageDataList.map(item => item.id)) + 1;
-    newPackageData.id = newId;
-    packageDataList.push(newPackageData);
+    let newId;
+    if (allPackages.length > 0) {
+        const idArray = allPackages.map(item => item.id);
+        const maxId = Math.max(...idArray);
+        newId = maxId + 1;
+    } else {
+        newId = 0;
+    }
 
+    newPackageData.id = newId;
+    
+    allPackages.push(newPackageData);
     console.log('New package added:', newPackageData);
 }

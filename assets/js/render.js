@@ -24,7 +24,7 @@ export function renderCards(data) {
 
         return `
         <li class="cards">
-            <a href="${item.linkUrl}" class="card">
+            <a href="#" class="card">
                 <div class="card-img">
                     <img src="${item.image}" alt="${item.name}" class="img">
                 </div>
