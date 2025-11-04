@@ -2,7 +2,8 @@ const packageDataList = [
     {
         id: 1,
         name: '綠島自由行套裝行程',
-        image: 'https://github.com/hexschool/2022-web-layout-training/blob/main/js_week5/travel_1.png?raw=true',
+        linkUrl: '#',
+        image: '../assets/images/swim.png',
         place: '台東',
         price: 1280,
         number: 8,
@@ -12,7 +13,8 @@ const packageDataList = [
     {
         id: 2,
         name: '清境高空觀景步道二日遊',
-        image: 'https://github.com/hexschool/2022-web-layout-training/blob/main/js_week5/travel_4.png?raw=true',
+        linkUrl: '#',
+        image: '../assets/images/climbMountains.png',
         place: '南投',
         price: 2580,
         number: 12,
@@ -22,7 +24,8 @@ const packageDataList = [
     {
         id: 3,
         name: '南庄度假村露營車二日遊',
-        image: 'https://github.com/hexschool/2022-web-layout-training/blob/main/js_week5/travel_6.png?raw=true',
+        linkUrl: '#',
+        image: '../assets/images/camping.png',
         place: '台中', 
         price: 1280,
         number: 2,
@@ -32,7 +35,8 @@ const packageDataList = [
     {
         id: 4,
         name: '山林悠遊雙人套票',
-        image: 'https://github.com/hexschool/2022-web-layout-training/blob/main/js_week5/travel_3.png?raw=true',
+        linkUrl: '#',
+        image: '../assets/images/waterfall.png',
         place: '台中',
         price: 880,
         number: 10,
@@ -42,7 +46,8 @@ const packageDataList = [
     {
         id: 5,
         name: '漁樂碼頭釣魚體驗套票',
-        image: 'https://github.com/hexschool/2022-web-layout-training/blob/main/js_week5/travel_2.png?raw=true',
+        linkUrl: '#',
+        image: '../assets/images/fishing.png',
         place: '台中',
         price: 1280,
         number: 5,
@@ -52,7 +57,8 @@ const packageDataList = [
     {
         id: 6,
         name: '熊森公園親子二日遊套票',
-        image: 'https://github.com/hexschool/2022-web-layout-training/blob/main/js_week5/travel_5.png?raw=true',
+        linkUrl: '#',
+        image: '../assets/images/swinging.png',
         place: '高雄',
         price: 2480,
         number: 3,
@@ -60,3 +66,23 @@ const packageDataList = [
         description: '來自日本最受歡迎的兒童遊樂園《 BearSon Park 熊森公園》於全世界有800多家據點，在全世界、日本及台灣，很多小孩的童年都在遊戲愛樂園裡一同成長，提供兒童一個最富教育性及娛樂性的休憩遊樂天地！',
     },
 ];
+
+export function getAllPackages() {
+    return packageDataList;
+}
+
+export function getFilteredPackages(place) {
+    if (place === "") {
+        return packageDataList;
+    }
+
+    return packageDataList.filter(item => item.place === place);
+}
+
+export function addPackage(newPackageData) {
+    const newId = Math.max(...packageDataList.map(item => item.id)) + 1;
+    newPackageData.id = newId;
+    packageDataList.push(newPackageData);
+
+    console.log('New package added:', newPackageData);
+}

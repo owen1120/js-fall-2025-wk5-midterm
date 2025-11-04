@@ -29,15 +29,15 @@
                 <div class="inputGroup">
                   <div class="input-primary">
                     <label for="packageName" class="label label-sm">套票名稱</label>
-                    <input type="text" id="packageName" class="input para-md" placeholder="請填寫圖片名稱">
+                    <input type="text" id="packageName" name="packageName" class="input para-md" placeholder="請填寫圖片名稱">
                   </div>
                   <div class="input-primary">
                     <label for="packageWebsite" class="label label-sm">圖片網址</label>
-                    <input type="url" id="packageWebsite" class="input para-md" placeholder="請填寫圖片網址">
+                    <input type="url" id="packageWebsite" name="packageWebsite" class="input para-md" placeholder="請填寫圖片網址">
                   </div>
                   <div class="select-primary">
                     <label for="packagePlace" class="label label-sm">景點地區</label>
-                    <select id="packagePlace" class="select packagePlace para-md">
+                    <select id="packagePlace" name="packagePlace" class="select packagePlace para-md">
                       <option value="" disabled selected>請選擇景點地區</option>
                       <option value="基隆">基隆</option>
                       <option value="台北">台北</option>
@@ -68,19 +68,19 @@
                   </div>
                   <div class="input-primary">
                     <label for="packagePrice" class="label label-sm">套票金額</label>
-                    <input type="number" id="packagePrice" class="input para-md" placeholder="請填寫套票金額">
+                    <input type="number" id="packagePrice" name="packagePrice" class="input para-md" placeholder="請填寫套票金額">
                   </div>
                   <div class="input-primary">
                     <label for="packageNum" class="label label-sm">套票組數</label>
-                    <input type="number" id="packageNum" class="input para-md" placeholder="請填寫套票組數">
+                    <input type="number" id="packageNum" name="packageNum" class="input para-md" placeholder="請填寫套票組數">
                   </div>
                   <div class="input-primary">
                     <label for="packageStar" class="label label-sm">套票星級</label>
-                    <input type="number" id="packageStar" class="input para-md" placeholder="請填寫套票星級">
+                    <input type="number" id="packageStar" name="packageStar" class="input para-md" placeholder="請填寫套票星級">
                   </div>
                   <div class="textarea-primary">
                     <label for="packageDesc" class="label label-sm">套票描述</label>
-                    <textarea id="packageDesc" class="textarea para-md" maxlength="100" placeholder="請填寫套票描述 (限 100 字)"></textarea>
+                    <textarea id="packageDesc" name="packageDesc" class="textarea para-md" maxlength="100" placeholder="請填寫套票描述 (限 100 字)"></textarea>
                   </div>
                 </div>
                 <button type="submit" id="submit-button" class="button-primary">新增套票</button>
@@ -121,13 +121,13 @@
                 <path d="M15 10H9L12.1386 6L15 10Z" fill="#00807E"/>
               </svg>
             </div>
-            <p class="para-md">本次搜尋共 6 筆資料</p>
+            <p id="searchNum" class="para-md">本次搜尋共 6 筆資料</p>
           </div>
           <ul class="cards-wrapper">
             <li class="cards">
               <a href="#" class="card">
                 <div class="card-img">
-                  <img src="../assets/images/swim.png" alt="swim" class="img">
+                  <img src="../assets/images/swim.png" alt="綠島自由行套裝行程" class="img">
                 </div>
                 <div class="card-contents">
                   <div class="contents-top">
@@ -158,7 +158,7 @@
             <li class="cards">
               <a href="#" class="card">
                 <div class="card-img">
-                  <img src="../assets/images/climbMountains.png" alt="climbMountains" class="img">
+                  <img src="../assets/images/climbMountains.png" alt="清境高空觀景步道二日遊" class="img">
                 </div>
                 <div class="card-contents">
                   <div class="contents-top">
@@ -189,7 +189,7 @@
             <li class="cards">
               <a href="#" class="card">
                 <div class="card-img">
-                  <img src="../assets/images/camping.png" alt="camping" class="img">
+                  <img src="../assets/images/camping.png" alt="南庄度假村露營車二日遊" class="img">
                 </div>
                 <div class="card-contents">
                   <div class="contents-top">
@@ -220,7 +220,7 @@
             <li class="cards">
               <a href="#" class="card">
                 <div class="card-img">
-                  <img src="../assets/images/waterfall.png" alt="waterfall" class="img">
+                  <img src="../assets/images/waterfall.png" alt="山林悠遊雙人套票" class="img">
                 </div>
                 <div class="card-contents">
                   <div class="contents-top">
@@ -251,7 +251,7 @@
             <li class="cards">
               <a href="#" class="card">
                 <div class="card-img">
-                  <img src="../assets/images/fishing.png" alt="fishing" class="img">
+                  <img src="../assets/images/fishing.png" alt="漁樂碼頭釣魚體驗套票" class="img">
                 </div>
                 <div class="card-contents">
                   <div class="contents-top">
@@ -282,7 +282,7 @@
             <li class="cards">
               <a href="#" class="card">
                 <div class="card-img">
-                  <img src="../assets/images/swinging.png" alt="swinging" class="img">
+                  <img src="../assets/images/swinging.png" alt="熊森公園親子二日遊套票" class="img">
                 </div>
                 <div class="card-contents">
                   <div class="contents-top">

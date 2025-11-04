@@ -1,6 +1,17 @@
 import './assets/scss/all.scss';
 
-import './assets/js/data.js';
-import './assets/js/filter.js';
+import { getAllPackages } from './assets/js/state.js';
+import { renderCards } from './assets/js/render.js';
+import { setupListeners } from './assets/js/listeners.js';
 
-console.log('Hello world');
+function init() {
+    console.log('Initializing application...');
+
+    setupListeners();
+
+    renderCards(getAllPackages());
+
+    console.log('Application initialized.');
+}
+
+window.addEventListener('DOMContentLoaded', init);
