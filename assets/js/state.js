@@ -2,7 +2,7 @@ const packageDataList = [
     {
         id: 1,
         name: '綠島自由行套裝行程',
-        image: '../assets/images/swim.png',
+        image: 'https://cdn.pixabay.com/photo/2017/08/07/08/22/sea-2601368_1280.jpg',
         place: '台東',
         price: 1280,
         number: 8,
@@ -12,7 +12,7 @@ const packageDataList = [
     {
         id: 2,
         name: '清境高空觀景步道二日遊',
-        image: '../assets/images/climbMountains.png',
+        image: 'https://images.unsplash.com/photo-1526772662000-3f88f10405ff?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074',
         place: '南投',
         price: 2580,
         number: 12,
@@ -22,7 +22,7 @@ const packageDataList = [
     {
         id: 3,
         name: '南庄度假村露營車二日遊',
-        image: '../assets/images/camping.png',
+        image: 'https://images.unsplash.com/photo-1598954467835-3b0b6fe3be70?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170',
         place: '台中', 
         price: 1280,
         number: 2,
@@ -32,7 +32,7 @@ const packageDataList = [
     {
         id: 4,
         name: '山林悠遊雙人套票',
-        image: '../assets/images/waterfall.png',
+        image: 'https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170',
         place: '台中',
         price: 880,
         number: 10,
@@ -42,7 +42,7 @@ const packageDataList = [
     {
         id: 5,
         name: '漁樂碼頭釣魚體驗套票',
-        image: '../assets/images/fishing.png',
+        image: 'https://images.unsplash.com/photo-1490556505947-f833c3a09659?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170',
         place: '台中',
         price: 1280,
         number: 5,
@@ -52,7 +52,7 @@ const packageDataList = [
     {
         id: 6,
         name: '熊森公園親子二日遊套票',
-        image: '../assets/images/swinging.png',
+        image: 'https://images.unsplash.com/photo-1535726858289-9ffe2dff6f52?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1169',
         place: '高雄',
         price: 2480,
         number: 3,
