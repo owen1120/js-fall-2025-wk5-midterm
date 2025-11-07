@@ -67,6 +67,12 @@
         align-items: flex-start;
         #chart{
           min-height: 192px;
+          .c3-chart-arcs-title{
+            fill: #4b4b4b;
+          }
+          .c3-legend-item text{
+            fill: #6e6e6e;
+          }
         }
       }
       .cards-wrapper{

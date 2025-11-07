@@ -1,5 +1,6 @@
 import { addPackage, getFilteredPackages, transformFormData } from "./state.js";
 import { renderCards } from "./render.js";
+import { updateChart } from "../../c3Customize.js";
 
 function formListener() {
     const form = document.getElementById('addPackageForm');
@@ -40,6 +41,8 @@ function filterListener() {
         const filteredData = getFilteredPackages(selectedPlace);
 
         renderCards(filteredData);
+
+        updateChart(filteredData);
     });
 }
 

@@ -113,7 +113,7 @@ export function getAllPackages() {
 }
 
 export function getFilteredPackages(place) {
-    if (place === "" || place === "地區搜尋") {
+    if (place === "" || place === "全部地區" || place === "地區搜尋") {
         return allPackages;
     }
 
