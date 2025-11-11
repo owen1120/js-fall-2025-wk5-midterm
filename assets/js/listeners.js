@@ -21,7 +21,11 @@ function formListener() {
         addPackage(newPackageData);
 
         const currentFilter = document.getElementById('filterPlace').value;
-        renderCards(getFilteredPackages(currentFilter));
+        const filteredData = getFilteredPackages(currentFilter);
+
+        renderCards(filteredData);
+
+        updateChart(filteredData);
 
         form.reset();
     });
